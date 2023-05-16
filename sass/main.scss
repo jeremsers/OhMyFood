@@ -275,6 +275,7 @@ p {
 	display: flex;
 	position: relative;
 	align-items: center;
+	justify-content: center;
 	gap: 27px;
 	padding-left: 40px;
 	height: 72px;
@@ -284,11 +285,13 @@ p {
 
 	& h3 {
 		margin: 0;
+		margin-right: auto;
 	}
 	& i {
 		width: 22px;
 		color: $text-form;
 		font-size: 22px;
+		margin-right: auto;
 	}
 	&--alt {
 		& i {
@@ -638,6 +641,32 @@ footer {
 
 /*********Media queries*********/
 
+@media (max-width: 375px) {
+	.card {
+		&-content {
+			h4 {
+				font-size: 95%;
+			}
+			p {
+				font-size: 95%;
+			}
+		}
+	}
+}
+
+
+@media (min-width: 425px)/*  and (max-width: 1023px) */ {
+.card-res{
+
+	
+	margin: 0 3% 0 3%;
+	
+
+}
+
+}
+
+
 @media (min-width: 1024px) {
 	.headcontent {
 		&__title {
@@ -655,6 +684,7 @@ footer {
 
 	.card {
 		&--step {
+			gap: 27px;
 			width: 30%;
 			text-align: center;
 			justify-content: flex-start;
@@ -711,29 +741,6 @@ footer {
 		& ul {
 			flex-direction: row;
 			column-gap: 30px;
-		}
-	}
-}
-
-@media (min-width: 425px) {
-.card{
-	&--step{
-		gap: 30%;
-	}
-
-}
-
-}
-
-@media (max-width: 375px) {
-	.card {
-		&-content {
-			h4 {
-				font-size: 95%;
-			}
-			p {
-				font-size: 95%;
-			}
 		}
 	}
 }

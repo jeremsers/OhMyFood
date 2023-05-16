@@ -234,6 +234,7 @@ p {
   display: flex;
   position: relative;
   align-items: center;
+  justify-content: center;
   gap: 27px;
   padding-left: 40px;
   height: 72px;
@@ -243,11 +244,13 @@ p {
 }
 .card h3 {
   margin: 0;
+  margin-right: auto;
 }
 .card i {
   width: 22px;
   color: #7e7e7e;
   font-size: 22px;
+  margin-right: auto;
 }
 .card--alt i {
   color: #9356dc;
@@ -580,6 +583,19 @@ footer ul i {
 }
 
 /*********Media queries*********/
+@media (max-width: 375px) {
+  .card-content h4 {
+    font-size: 95%;
+  }
+  .card-content p {
+    font-size: 95%;
+  }
+}
+@media (min-width: 425px) {
+  .card-res {
+    margin: 0 3% 0 3%;
+  }
+}
 @media (min-width: 1024px) {
   .headcontent__title {
     font-size: 40px;
@@ -592,6 +608,7 @@ footer ul i {
     justify-content: space-between;
   }
   .card--step {
+    gap: 27px;
     width: 30%;
     text-align: center;
     justify-content: flex-start;
@@ -643,19 +660,6 @@ footer ul i {
   footer ul {
     flex-direction: row;
     column-gap: 30px;
-  }
-}
-@media (min-width: 425px) {
-  .card--step {
-    gap: 30%;
-  }
-}
-@media (max-width: 375px) {
-  .card-content h4 {
-    font-size: 95%;
-  }
-  .card-content p {
-    font-size: 95%;
   }
 }
 
