@@ -715,6 +715,16 @@ footer {
 	}
 }
 
+@media (min-width: 425px) {
+.card{
+	&--step{
+		gap: 30%;
+	}
+
+}
+
+}
+
 @media (max-width: 375px) {
 	.card {
 		&-content {
