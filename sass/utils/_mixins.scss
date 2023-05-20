@@ -1,0 +1,19 @@
+@mixin lingrad {
+	background: linear-gradient(-10deg, $button-primary, $button-secondary);
+}
+
+@mixin lingrad_alt {
+	background: linear-gradient(
+		-10deg,
+		lighten($button-primary, 3%),
+		lighten($button-secondary, 3%)
+	);
+}
+
+@mixin button-shadow {
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+@mixin button-shadow_alt {
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}

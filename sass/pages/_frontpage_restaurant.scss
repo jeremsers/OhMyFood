@@ -1,0 +1,50 @@
+.restaurant {
+	display: flex;
+	flex-direction: column;
+	padding: 50px 20px;
+	gap: 27px;
+
+	background-color: $bg-tertiary;
+	&__title {
+		margin: 0;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 27px;
+		& a:nth-child(1) .card-res {
+			animation-delay: 1320ms;
+		}
+		& a:nth-child(2) .card-res {
+			animation-delay: 1480ms;
+		}
+		& a:nth-child(3) .card-res {
+			animation-delay: 1580ms;
+		}
+		& a:nth-child(4) .card-res {
+			animation-delay: 1680ms;
+		}
+	}
+	@media (min-width: 1024px){
+		padding: 50px 10%;
+		&__container {
+			column-gap: 5%;
+			row-gap: 50px;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			& a:nth-child(1) .card-res {
+				animation-delay: 1320ms;
+			}
+			& a:nth-child(2) .card-res {
+				animation-delay: 1320ms;
+			}
+			& a:nth-child(3) .card-res {
+				animation-delay: 1480ms;
+			}
+			& a:nth-child(4) .card-res {
+				animation-delay: 1480ms;
+			}
+		}
+	}
+}

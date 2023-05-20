@@ -1,0 +1,15 @@
+.button {
+	border-radius: 25px;
+	border: none;
+	height: 50px;
+	width: 218px;
+	color: $bg-primary;
+	font-weight: 300;
+	font-size: 16px;
+	@include lingrad();
+	@include button-shadow();
+	&:hover {
+		@include lingrad_alt();
+		@include button-shadow_alt();
+	}
+}

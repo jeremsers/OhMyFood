@@ -1,0 +1,20 @@
+:root {
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+* {
+	margin: 0;
+	
+}
+
+body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	height: 100%;
+	max-width: 1440px;
+}

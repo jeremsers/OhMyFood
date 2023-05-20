@@ -1,0 +1,57 @@
+.card--step::before {
+	display: flex;
+	position: absolute;
+	left: -10px;
+	content: counter(cardCounter);
+	height: 24px;
+	width: 24px;
+	background-color: $button-primary;
+	border-radius: 50%;
+	color: $bg-primary;
+	justify-content: center;
+	align-items: center;
+	counter-increment: cardCounter;
+}
+.card {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	gap: 27px;
+	padding-left: 40px;
+	height: 72px;
+	background-color: $bg-tertiary;
+	border-radius: 20px;
+	@include button-shadow();
+
+	& h3 {
+		margin: 0;
+		margin-right: auto;
+	}
+	& i {
+		width: 22px;
+		color: $text-form;
+		font-size: 22px;
+		margin-right: auto;
+	}
+	&--alt {
+		& i {
+			color: $button-primary;
+		}
+	}
+	@media (min-width: 1024px) {
+		&--step {
+			gap: 27px;
+			width: 30%;
+			text-align: center;
+			justify-content: flex-start;
+			padding-left: 0;
+			& h3 {
+				font-size: 16px;
+			}
+			& i {
+				padding-left: 35px;
+			}
+		}
+	}
+}
