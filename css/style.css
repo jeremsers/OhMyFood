@@ -14,6 +14,7 @@
 @keyframes like {
   0% {
     transform: scale(0);
+    opacity: 1;
   }
   50% {
     transform: scale(1.3);
@@ -59,6 +60,17 @@
     opacity: 0;
   }
 }
+@keyframes checkmark_pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 :root {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -88,7 +100,7 @@ body.homepage::before {
   right: 0;
   background-color: #fff;
   pointer-events: none;
-  z-index: 2;
+  z-index: 3;
   opacity: 0;
   animation: fadeout 2000ms;
 }
@@ -110,7 +122,7 @@ body.homepage::after {
   display: inline;
   pointer-events: none;
   font-weight: 900;
-  z-index: 2;
+  z-index: 3;
   animation: rotateFade 2000ms;
 }
 
@@ -419,7 +431,6 @@ footer ul i {
 .card-res-content__icon {
   box-sizing: content-box;
   position: relative;
-  height: min-content;
   z-index: 2;
 }
 .card-res-content__icon .empty {
@@ -432,7 +443,10 @@ footer ul i {
   color: #7e7e7e;
 }
 .card-res-content__icon .empty--menu {
+  top: 0;
+  left: 0;
   font-size: 1em;
+  position: relative;
 }
 .card-res-content__icon .full {
   font-size: 1.4em;
@@ -448,19 +462,14 @@ footer ul i {
   animation-fill-mode: forwards;
 }
 .card-res-content__icon .full--menu {
-  top: 14px;
-  left: -36px;
+  top: 0;
+  left: -1px;
   font-size: 1.1em;
   animation: pop 0ms;
   animation-fill-mode: forwards;
 }
 @media (max-width: 1023px) {
   .card-res-content__icon:active > .full {
-    background: linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    opacity: 1;
     animation: like 800ms ease-out;
   }
   .card-res-content__icon:active > .empty {
@@ -473,11 +482,6 @@ footer ul i {
     width: 47%;
   }
   .card-res-content__icon:hover > .full {
-    background: linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    opacity: 1;
     animation: like 800ms ease-out;
   }
   .card-res-content__icon:hover > .empty {
@@ -616,6 +620,10 @@ footer ul i {
   width: 60px;
   transition: width 500ms ease-in-out;
 }
+.menucard:hover .menucard__checkmark > i {
+  animation: checkmark_pop 400ms ease-out;
+  animation-delay: 300ms;
+}
 
 .menu {
   position: relative;
@@ -625,7 +633,6 @@ footer ul i {
   gap: 40px;
   border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
-  z-index: 1;
   padding: 0 17px;
   margin-top: 230px;
 }

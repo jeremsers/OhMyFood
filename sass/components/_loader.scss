@@ -8,7 +8,7 @@ body {
 		right: 0;
 		background-color: $bg-primary;
 		pointer-events: none;
-		z-index: 2;
+		z-index: 3;
 		opacity: 0;
 		animation: fadeout 2000ms;
 	}
@@ -30,7 +30,7 @@ body {
 		display: inline;
 		pointer-events: none;
 		font-weight: 900;
-		z-index: 2;
+		z-index: 3;
 		animation: rotateFade 2000ms;
 	}
 }

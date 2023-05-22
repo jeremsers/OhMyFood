@@ -77,5 +77,10 @@
 		width: 60px;
 
 		transition: width 500ms ease-in-out;
+		& > i {
+			animation: checkmark_pop 400ms ease-out;
+			animation-delay: 300ms ;
+		}
 	}
+	
 }
