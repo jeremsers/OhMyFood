@@ -335,7 +335,7 @@ footer ul i {
   font-size: 22px;
   margin-right: auto;
 }
-.card--alt i {
+.card--step:hover > i {
   color: #9356dc;
 }
 .card--step::before {
