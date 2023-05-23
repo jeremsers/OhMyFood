@@ -20,12 +20,12 @@ body {
 		margin-left: -4vw;
 		margin-top: -4vw;
 		text-align: center;
-		font-family: "Font Awesome 5 Free";
+		font-family: "Font Awesome 6 Free";
 		font-size: 8vw;
 		background: linear-gradient($button-primary, $button-secondary);
 		-webkit-background-clip: text;
 		background-clip: text;
-		-webkit-text-fill-color: rgba(0, 0, 0, 0);
+		color: rgba(0, 0, 0, 0);
 		content: "\f1ce";
 		display: inline;
 		pointer-events: none;

@@ -1,17 +1,3 @@
-.card--step::before {
-	display: flex;
-	position: absolute;
-	left: -10px;
-	content: counter(cardCounter);
-	height: 24px;
-	width: 24px;
-	background-color: $button-primary;
-	border-radius: 50%;
-	color: $bg-primary;
-	justify-content: center;
-	align-items: center;
-	counter-increment: cardCounter;
-}
 .card {
 	display: flex;
 	position: relative;
@@ -38,6 +24,20 @@
 		& i {
 			color: $button-primary;
 		}
+	}
+	&--step::before{
+		display: flex;
+	position: absolute;
+	left: -10px;
+	content: counter(cardCounter);
+	height: 24px;
+	width: 24px;
+	background-color: $button-primary;
+	border-radius: 50%;
+	color: $bg-primary;
+	justify-content: center;
+	align-items: center;
+	counter-increment: cardCounter;
 	}
 	@media (min-width: 1024px) {
 		&--step {
